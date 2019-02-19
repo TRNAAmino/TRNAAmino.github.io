@@ -1,29 +1,129 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title> title</title>
+	<title> tRNA's GAME </title>
 </head>
-<body>
-	<h1> ________ </h1>
-	<div id="Adisplay"> 
-		<!--AMINO WILL DISPLAY HERE-->
+
+<style>
+.button {
+  background-color:#FFFFFF ;
+  font-size: 16px;
+  border-radius: 12px;
+
+
+ </style>
+
+<body><body style="background-color:#CCFFEE;">
+	<h1><br><br><br><div align="center"><font face="Comic Sans MS" size="8"> tRNA's Game! </font></div></h1>
+	<p>
+	<br>
+	<div id="Adisplay" align="center">
+		<!--AMINO WILL BE DISPLAYED HERE-->
 
 		
-	</div>
-	<button onclick="newA()">New Amino Acid</button>
+	</div><br><br><br><br>
+	<div align="center"><button onclick="newA()" class="button" style="width:80%" ><font face="Comic Sans MS"> New Amino Acid </font></button></div>
+
+</p>
 
 	<script>
 		var aminos = [
-	'Glutamic Acid [G A A]',
-	'Glutamic Acid [G A G]',
-	'Aspartic Acid [G A C]'
+	'<font face="Comic Sans MS" size="4"> Glutamic Acid <br> <font size="6"> codon: [G A A]',
+	'<font face="Comic Sans MS" size="4"> Glutamic Acid <br> <font size="6"> codon: [G A G]',
+
+	'<font face="Comic Sans MS" size="4"> Aspartic Acid <br> <font size="6"> codon: [G A C]',
+	'<font face="Comic Sans MS" size="4"> Aspartic Acid <br> <font size="6"> codon: [G A T]',
+
+	'<font face="Comic Sans MS" size="4"> Glycine <br> <font size="6"> codon: [G G A]',
+	'<font face="Comic Sans MS" size="4"> Glycine <br> <font size="6"> codon: [G G G]',
+	'<font face="Comic Sans MS" size="4"> Glycine <br> <font size="6"> codon: [G G C]',
+	'<font face="Comic Sans MS" size="4"> Glycine <br> <font size="6"> codon: [G G T]',
+
+	'<font face="Comic Sans MS" size="4"> Alanine <br> <font size="6"> codon: [G C A]',
+	'<font face="Comic Sans MS" size="4"> Alanine <br> <font size="6"> codon: [G C G]',
+	'<font face="Comic Sans MS" size="4"> Alanine <br> <font size="6"> codon: [G C C]',
+	'<font face="Comic Sans MS" size="4"> Alanine <br> <font size="6"> codon: [G C T]',
+
+	'<font face="Comic Sans MS" size="4"> Valine <br> <font size="6"> codon: [G T A]',
+	'<font face="Comic Sans MS" size="4"> Valine <br> <font size="6"> codon: [G T G]',
+	'<font face="Comic Sans MS" size="4"> Valine <br> <font size="6"> codon: [G T C]',
+	'<font face="Comic Sans MS" size="4"> Valine <br> <font size="6"> codon: [G T T]',
+
+
+	'<font face="Comic Sans MS" size="4"> Glutamine <br> <font size="6"> codon: [C A A]',
+	'<font face="Comic Sans MS" size="4"> Glutamine <br> <font size="6"> codon: [C A G]',
+
+	'<font face="Comic Sans MS" size="4"> Histidine <br> <font size="6"> codon: [C A C]',
+	'<font face="Comic Sans MS" size="4"> Histidine <br> <font size="6"> codon: [C A T]',
+
+	'<font face="Comic Sans MS" size="4"> Arginine <br> <font size="6"> codon: [C G A]',
+	'<font face="Comic Sans MS" size="4"> Arginine <br> <font size="6"> codon: [C G G]',
+	'<font face="Comic Sans MS" size="4"> Arginine <br> <font size="6"> codon: [C G C]',
+	'<font face="Comic Sans MS" size="4"> Arginine <br> <font size="6"> codon: [C G T]',
+
+	'<font face="Comic Sans MS" size="4"> Proline <br> <font size="6"> codon: [C C A]',
+	'<font face="Comic Sans MS" size="4"> Proline <br> <font size="6"> codon: [C C G]',
+	'<font face="Comic Sans MS" size="4"> Proline <br> <font size="6"> codon: [C C C]',
+	'<font face="Comic Sans MS" size="4"> Proline <br> <font size="6"> codon: [C C T]',
+
+	'<font face="Comic Sans MS" size="4"> Leucine <br> <font size="6"> codon: [C T A]',
+	'<font face="Comic Sans MS" size="4"> Leucine <br> <font size="6"> codon: [C T G]',
+	'<font face="Comic Sans MS" size="4"> Leucine <br> <font size="6"> codon: [C T C]',
+	'<font face="Comic Sans MS" size="4"> Leucine <br> <font size="6"> codon: [C T T]',
+
+
+	'<font face="Comic Sans MS" size="4"> Tyrosine <br> <font size="6"> codon: [T A C]',
+	'<font face="Comic Sans MS" size="4"> Tyrosine <br> <font size="6"> codon: [T A T]',
+
+	'<font face="Comic Sans MS" size="4"> Tryptophan <br> <font size="6"> codon: [T G G]',
+
+	'<font face="Comic Sans MS" size="4"> Cysteine <br> <font size="6"> codon: [T G C]',
+	'<font face="Comic Sans MS" size="4"> Cysteine <br> <font size="6"> codon: [T G T]',
+
+	'<font face="Comic Sans MS" size="4"> Serine <br> <font size="6"> codon: [T C A]',
+	'<font face="Comic Sans MS" size="4"> Serine <br> <font size="6"> codon: [T C G]',
+	'<font face="Comic Sans MS" size="4"> Serine <br> <font size="6"> codon: [T C C]',
+	'<font face="Comic Sans MS" size="4"> Serine <br> <font size="6"> codon: [T C T]',
+
+	'<font face="Comic Sans MS" size="4"> Leucine <br> <font size="6"> codon: [T T A]',
+	'<font face="Comic Sans MS" size="4"> Leucine <br> <font size="6"> codon: [T T G]',
+
+	'<font face="Comic Sans MS" size="4"> Phenylalanine <br> <font size="6"> codon: [T T C]',
+	'<font face="Comic Sans MS" size="4"> Phenylalanine <br> <font size="6"> codon: [T T T]',
+
+
+	'<font face="Comic Sans MS" size="4"> Lysine <br> <font size="6"> codon: [A A A]',
+	'<font face="Comic Sans MS" size="4"> Lysine <br> <font size="6"> codon: [A A G]',
+
+	'<font face="Comic Sans MS" size="4"> Asparagine <br> <font size="6"> codon: [A A C]',
+	'<font face="Comic Sans MS" size="4"> Asparagine <br> <font size="6"> codon: [A A T]',
+
+	'<font face="Comic Sans MS" size="4"> Arginine <br> <font size="6"> codon: [A G A]',
+	'<font face="Comic Sans MS" size="4"> Arginine <br> <font size="6"> codon: [A G G]',
+
+	'<font face="Comic Sans MS" size="4"> Serine <br> <font size="6"> codon: [A G C]',
+	'<font face="Comic Sans MS" size="4"> Serine <br> <font size="6"> codon: [A G T]',
+
+	'<font face="Comic Sans MS" size="4"> Threonine <br> <font size="6"> codon: [A C A]',
+	'<font face="Comic Sans MS" size="4"> Threonine <br> <font size="6"> codon: [A C G]',
+	'<font face="Comic Sans MS" size="4"> Threonine <br> <font size="6"> codon: [A C C]',
+	'<font face="Comic Sans MS" size="4"> Threonine <br> <font size="6"> codon: [A C T]',
+
+	'<font face="Comic Sans MS" size="4"> Methionine <br> <font size="6"> codon: [A T G]',
+
+	'<font face="Comic Sans MS" size="4"> Isoleucine <br> <font size="6"> codon: [A T A]',
+	'<font face="Comic Sans MS" size="4"> Isoleucine <br> <font size="6"> codon: [A T C]',
+	'<font face="Comic Sans MS" size="4"> Methionine <br> <font size="6"> codon: [A T T]',
+
 ]
 
 function newA() {
 	var randomNumber = Math.floor(Math.random() * (aminos.length));
 	document.getElementById('Adisplay').innerHTML = aminos[randomNumber];
 } 
-
 	</script>
+
+
 </body>
 </html>
